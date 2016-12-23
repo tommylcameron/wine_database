@@ -1,0 +1,26 @@
+<h2 id="indextitle">Names of Wines</h2>
+
+<table class="table table-hover table-inverse">
+     <thead class="thead-inverse">
+        <tr>
+            <th>Name</th>
+            <th>Varietal</th>
+            <th>Year</th>
+            <th>Rating</th>
+            <th>Region</th>
+        </tr>
+     </thead>   
+    <tbody>
+    <% @beverages.each do |beverage| %>
+        <tr>
+            <td><%= link_to beverage.name, beverage_path(beverage) %></td>
+            <td><%= beverage.varietal %></td>
+            <td><%= beverage.vintage_year %></td>
+            <td><%= beverage.rating %></td>
+            <td><%= beverage.country %></td>
+        </tr>
+    </tbody>
+    <% end %>    
+</table>
+
+<%= link_to '<button type="button">Add a New Wine</button>'.html_safe, new_beverage_path %>

@@ -1,0 +1,37 @@
+<h2 id="indextitle"><%= @beverage.name %></h2>
+<table class="table table-hover table-inverse">
+    <tbody>
+        <tr>
+            <td>name</td>
+            <td><%= @beverage.name %></td>
+        </tr>
+        <tr>
+            <td>varietal</td>
+            <td><%= @beverage.varietal %></td>
+        </tr>
+        <tr>
+            <td>year</td>
+            <td><%= @beverage.vintage_year %><td>
+        </tr>
+        <tr>
+            <td>rating</td>
+            <td><%= @beverage.rating %></td>
+        </tr>
+        <tr>
+            <td>country</td>
+            <td><%= @beverage.country %></td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td><%= @beverage.description %></td>
+        </tr>
+        <tr>
+            <td>reporter</td>
+            <td><%= @beverage.reporter %></td>
+        </tr>
+    </tbody>
+</table>
+
+<%= link_to '<button type="button">Edit Beverage</button>'.html_safe, edit_beverage_path %>
+<%= link_to '<button type="button">Return to List</button>'.html_safe, root_path %>
+<%= link_to '<button type="button">Destroy Beverage</button>'.html_safe, beverage_path(@beverage), method: :delete %>

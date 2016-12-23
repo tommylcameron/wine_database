@@ -1,0 +1,37 @@
+<%= form_for @beverage, url: {action: @action} do |b| %>
+    <p>
+      <%= b.label :name %><br>        
+      <%= b.text_field :name %>
+    </p> 
+    <p>
+      <%= b.label :varietal %><br>    
+      <%= b.text_field :varietal %>
+    </p>
+    <p>
+      <%= b.label :alcohol_percentage %><br>    
+      <%= b.text_field :alcohol_percentage %>
+    </p> 
+    <p>
+      <%= b.label :vintage_year %><br>    
+      <%= b.text_field :vintage_year %>
+    </p>
+    <p>
+      <%= b.label :rating %><br>    
+      <%= b.text_field :rating %>
+    </p>
+    <p>
+      <%= b.label :country %><br>
+      <%= b.text_field :country %>
+    </p>
+    <p>
+      <%= b.label :description %><br>
+      <%= b.text_area :description %>
+    </p>
+    <p>
+      <%= b.label :reporter %><br>
+      <%= b.text_field :reporter %>
+    </p>
+    <p>
+      <%= b.submit @action.capitalize %><br>
+    </p>  
+<% end %>
