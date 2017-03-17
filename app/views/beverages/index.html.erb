@@ -9,18 +9,27 @@
             <th>Rating</th>
             <th>Region</th>
         </tr>
-     </thead>   
-    <tbody>
-    <% @beverages.each do |beverage| %>
         <tr>
-            <td><%= link_to beverage.name, beverage_path(beverage) %></td>
-            <td><%= beverage.varietal %></td>
-            <td><%= beverage.vintage_year %></td>
-            <td><%= beverage.rating %></td>
-            <td><%= beverage.country %></td>
+            <th><input type="text" id="name_filter"/></th>
+            <th><input type="text" id="varietal_filter"/></th>
+            <th><input type="text" id="year_filter"/></th>
+            <th><input type="text" id="rating_filter"/></th>
+            <th><input type="text" id="region_filter"/></th>
         </tr>
+     </thead>   
+    <tbody id="tablebody">
+    <% @beverages.each do |beverage| %>
+        <tr class = "trow">
+            <td class="tname"><%= link_to beverage.name, beverage_path(beverage) %></td>
+            <td class="tvarietal"><%= beverage.varietal %></td>
+            <td class="tvintage_year"><%= beverage.vintage_year %></td>
+            <td class="trating"><%= beverage.rating %></td>
+            <td class="tcountry"><%= beverage.country %></td>
+        </tr>
+     <% end %> 
     </tbody>
-    <% end %>    
+      
 </table>
 
 <%= link_to '<button type="button">Add a New Wine</button>'.html_safe, new_beverage_path %>
+<%= javascript_include_tag 'index', 'data-turbolinks-track' => true %>
