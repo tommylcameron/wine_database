@@ -29,6 +29,10 @@
             <td>reporter</td>
             <td><%= @beverage.reporter %></td>
         </tr>
+        <tr>
+            <td>date</td>
+            <td><%= @beverage.created_at.to_date %></td>
+        </tr>
     </tbody>
 </table>
 
