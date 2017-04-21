@@ -13,8 +13,19 @@
  *= require_tree .
  *= require_self
  */
+@import "font-awesome-sprockets";
+@import "font-awesome";
+ 
 body {
-    background-image: url(http://www.weightlossreviewshub.com/wp-content/uploads/2016/03/Red-Wine.jpg);
-    font-family: "Cormorant Garamond", serif;
+    background: #C04848; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #C04848 , #480048); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #C04848 , #480048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Prompt', sans-serif;
 }
+
+.table-text, #indextitle, .main-title, .show-text, .fa-glass,
+.trow, .whitetext {
+    color: white;
+}
+
 

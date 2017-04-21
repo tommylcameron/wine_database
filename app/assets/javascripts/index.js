@@ -6,10 +6,8 @@ function bindFilterToColumn(column_slug) {
         var trows = document.getElementsByClassName("trow");
         Array.prototype.forEach.call(trows, function(row) {
             var column = row.getElementsByClassName(column_class)[0];
-
             var searchString = filter.value.toLowerCase();
             var columnValue = column.textContent.toLowerCase();
-
             row.style.display = "";
             if (!columnValue.includes(searchString)) {
                 row.style.display = "none";
