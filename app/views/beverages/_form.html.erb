@@ -1,34 +1,34 @@
 <div>
   <%= form_for @beverage, url: {action: @action} do |b| %>
-      <p  class="whitetext">
+      <p>
         <%= b.label :name %><br>        
         <%= b.text_field :name %>
       </p> 
-      <p class="whitetext">
+      <p>
         <%= b.label :varietal %><br>    
         <%= b.text_field :varietal %>
       </p>
-      <p class="whitetext">
+      <p>
         <%= b.label :alcohol_percentage %><br>    
         <%= b.text_field :alcohol_percentage %>
       </p> 
-      <p class="whitetext">
+      <p>
         <%= b.label :vintage_year %><br>    
         <%= b.text_field :vintage_year %>
       </p>
-      <p class="whitetext">
+      <p>
         <%= b.label :rating %><br>    
         <%= b.text_field :rating %>
       </p>
-      <p class="whitetext">
+      <p>
         <%= b.label :country %><br>
         <%= b.text_field :country %>
       </p>
-      <p class="whitetext">
+      <p>
         <%= b.label :description %><br>
         <%= b.text_area :description %>
       </p>
-      <p class="whitetext">
+      <p>
         <%= b.label :reporter %><br>
         <%= b.text_field :reporter %>
       </p>
